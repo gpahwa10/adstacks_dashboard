@@ -74,9 +74,15 @@ class _MainScreenState extends State<MainScreen> {
                             Container(
                               height: 75,
                               width: 75,
-                              child: Image.asset(
-                                dummy,
-                                fit: BoxFit.contain,
+
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(width: 2,color: Color(0xFFFFB12B),)),
+                              child: ClipOval(
+                                child: Image.asset(
+                                  dummy,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                             SizedBox(height: 10),
@@ -88,7 +94,7 @@ class _MainScreenState extends State<MainScreen> {
                               ),
                             ),
                             Container(
-                              height: 20,
+                              height: 25,
                               width: 75,
                               decoration: BoxDecoration(
                                 color: Colors.white,
